@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: Spring-app
+  profiles:
+    active: dev
+
+server:
+  port: 8082
+
+welcome :
+  message : "Hello world"
+
+#to include all endpoints for actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        exclude: "env, beans"
